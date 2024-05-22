@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BMI" />
+    <meta
+      name="twitter:description"
+      content="A web app for BMI metric calculation"
+    />
+    <meta name="twitter:image" content="image.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="A web app for BMI metric calculation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="BMI Calculator" />
+    <meta
+      property="og:description"
+      content="A web app for BMI metric calculation"
+    />
+    <meta property="og:url" content="https://deji-ice.github.io/bmi/" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://res.cloudinary.com/dhvwthnzq/image/upload/v1716373055/android-chrome-192x192_zieaik.png"
+    />
+    <title>BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    class="bg-[#F8E72C] flex items-center justify-center md:shadow-lg md:shadow-[#F18140]"
+  >
+    <div
+      class="text-black bg-white rounded-lg md:shadow-lg md:shadow-[#F18140]"
+    >
+      <div class="py-8 px-8 flex flex-col justify-center items-center">
+        <h1 class="text-2xl font-bold mb-4">CALCULATE YOUR BMI</h1>
+        <form
+          onsubmit="bmi_calc(event)"
+          id="form"
+          action=""
+          class="flex flex-col items-center"
+        >
+          <div class="flex gap-6">
+            <div class="flex flex-col">
+              <label class="text-lg font-semibold mb-3" for="">Height</label>
+              <input
+                type="number"
+                id="height"
+                class="border-[3px] rounded-lg px-2 py-[5px] w-[150px] border-[#C8C8C8]"
+                type="text"
+                placeholder="centimeter"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="text-lg font-semibold mb-3" for="">Weight</label>
+              <input
+                type="number"
+                id="weight"
+                class="border-[3px] rounded-lg px-2 py-[5px] w-[150px] border-[#C8C8C8]"
+                type="text"
+                placeholder="Kilogram"
+              />
+            </div>
+          </div>
+
+          <button
+            id="submit"
+            type="submit"
+            class="mt-8 py-2 rounded-lg bg-black text-white w-[150px]"
+          >
+            CALCULATE
+          </button>
+          <span
+            id="bmi"
+            class="mt-8 py-2 rounded-lg text-center bg-black text-white w-full"
+            >Your BMI is...</span
+          >
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
